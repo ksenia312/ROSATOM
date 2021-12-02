@@ -21,7 +21,7 @@ export default connect(
                     <div className={style.footer__networks}>
                         <h3>Мы в соцсетях</h3>
                         <div className={style.footer__icons}>
-                            <a href="https://t.me/ROSATOMbhb" target="_blank"><i className="fab fa-telegram-plane" /></a>
+                            <a href="https://t.me/SaveOil" target="_blank"><i className="fab fa-telegram-plane" /></a>
                             <a href="https://twitter.com/rosatom/" target="_blank"><i className="fab fa-twitter" /></a>
                         </div>
                     </div>

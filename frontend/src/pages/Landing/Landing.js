@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import {Footer, Header} from "@components";
+import {Footer, GalleryBlock, Header} from "@components";
 import style from './Landing.module.scss'
 import {push} from "connected-react-router";
 
@@ -26,6 +26,8 @@ export default connect(
             массы необходимость помощи пострадавшим животным.
           </div>
         </div>
+
+        <GalleryBlock />
         <Footer />
       </div>
     )

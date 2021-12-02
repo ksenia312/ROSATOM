@@ -16,12 +16,16 @@
     height: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+
     .footer__contacts {
-      padding-top: 100px;
+      padding-top: 220px;
     }
     .footer__networks {
-      padding-top: 100px;
+      padding-top: 220px;
+      i {
+        color: white;
+        font-size: 5px;
+      }
     }
   }
 

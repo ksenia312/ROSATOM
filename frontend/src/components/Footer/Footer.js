@@ -20,7 +20,10 @@ export default connect(
                     </div>
                     <div className={style.footer__networks}>
                         <h3>Мы в соцсетях</h3>
-                        <div>.</div>
+                        <div>
+                            <i className="fas fa-twitter"/>
+                            <i className="fas fa-twitter"/>
+                        </div>
                     </div>
                 </div>
             </div>

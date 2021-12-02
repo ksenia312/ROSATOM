@@ -6,10 +6,6 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
-  position: absolute;
-  bottom: 0;
-  right: 0;
-
   .footer__content {
     color: #FFFFFF;
     margin: 0 123px;
@@ -22,9 +18,13 @@
     }
     .footer__networks {
       padding-top: 220px;
-      i {
-        color: white;
-        font-size: 5px;
+      .footer__icons {
+        display: flex;
+        justify-content: space-between;
+        i {
+          color: white;
+          font-size: 4em;
+        }
       }
     }
   }

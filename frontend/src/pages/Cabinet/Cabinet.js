@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import {Header, RecentAccidents} from "@components";
+import {Footer, Header, RecentAccidents} from "@components";
 import style from './Cabinet.module.scss'
 
 export default connect(
@@ -15,6 +15,7 @@ export default connect(
         <div className={style.content__container}>
           <RecentAccidents/>
         </div>
+        <Footer/>
       </div>
     )
   }

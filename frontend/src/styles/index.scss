@@ -1,0 +1,13 @@
+@import "null";
+@import "fonts";
+@import "variables";
+@import "root";
+@import "templates";
+
+html, body {
+  font-family: Raleway, sans-serif;
+  background-color:  map-get($colors, b-color);
+  position: relative;
+  margin: 0 auto;
+}
+

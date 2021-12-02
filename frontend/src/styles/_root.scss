@@ -1,0 +1,16 @@
+:root {
+  font-size: map-get($font, font-size);
+  color: map-get($font, font-color);
+
+  h1 {
+    font-size: map-get($font, h1-font-size);
+    font-weight: bold;
+    line-height: 110%;
+  }
+
+  h2 {
+    font-size: map-get($font, h2-font-size);
+    font-weight: bold;
+    line-height: 110%;
+  }
+}

@@ -4,7 +4,7 @@ export const types = {
   USER__FETCH_INFO: "USER__FETCH_INFO",
   USER__REPORT_ERROR: "USER__REPORT_ERROR",
   USER__FETCH_FORM: "USER__FETCH_FORM",
-  RENDER__CONTENT: 'RENDER__CONTENT'
+  USER__FETCH_MARKERS:"USER__FETCH_MARKERS"
 }
 
 export const reportError = (error) => {

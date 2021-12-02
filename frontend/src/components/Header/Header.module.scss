@@ -1,0 +1,45 @@
+@import "~@styles/common.scss";
+
+.header__container {
+  position: absolute;
+  color: map-get($colors, header-color);
+  top: 0;
+  left: 0;
+  background-image: url("~@files/header.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  @include sizes($h: map-get($header, global-h), $w: 100%);
+
+  .header {
+    @include sizes($h: map-get($header, h), $w: 100%);
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: url("~@files/header.png");
+    background-repeat: no-repeat;
+    background-size: 100% 600%;
+    display: flex;
+    justify-content: space-between;
+
+    .header__select {
+      outline: none;
+      background-color: rgba(60, 59, 59, 0.5);
+      padding: 0 10px;
+      margin-right: 20px;
+    }
+  }
+}
+
+@media all and (max-width: 800px) {
+  .header__container {
+    background-image: none;
+    @include sizes($h:  map-get($header, mobile-global-h), $w: 100%);
+
+    .header {
+      @include sizes($h: map-get($header, mobile-h), $w: 100%);
+      background-size: 100% 130%;
+    }
+  }
+}

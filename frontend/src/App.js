@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
+import {Landing} from "@pages";
 
 
 export default connect(
@@ -16,7 +17,7 @@ export default connect(
 
 
   routes = [
-    ['^/$', () => <div>landing</div>],
+    ['^/$', () => <Landing/>],
     // Path for / (main page with tasks)
   ]
 

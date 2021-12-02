@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import {Header} from "@components";
+import {Header, RecentAccidents} from "@components";
 import style from './Cabinet.module.scss'
 
 export default connect(
@@ -10,9 +10,11 @@ export default connect(
 
   render() {
     return (
-      <div className={style.personal_area__container}>
+      <div className={style.cabinet__container}>
         <Header/>
-
+        <div className={style.content__container}>
+          <RecentAccidents/>
+        </div>
       </div>
     )
   }

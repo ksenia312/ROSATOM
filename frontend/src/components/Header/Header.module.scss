@@ -23,6 +23,14 @@
     background-size: 100% 600%;
     display: flex;
     justify-content: space-between;
+    .header__nav {
+      display: flex;
+      width: 20%;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 50px;
+
+    }
   }
 
   .tagline__container {
@@ -32,7 +40,6 @@
       margin-top: map-get($header, h)+50px;
       font-size: 96px;
       font-weight: bold;
-      padding-right: 250px;
     }
   }
 

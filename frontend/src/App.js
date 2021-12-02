@@ -1,8 +1,8 @@
 import React from 'react'
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
-import Cabinet from "@pages/Cabinet/Cabinet";
-import {Authorization, Landing} from "@pages";
+import {Authorization, Cabinet, Landing} from "@pages";
+
 
 
 export default connect(

@@ -1,8 +1,15 @@
 @import "~@styles/common.scss";
 
 .recent_accidents__container{
-  .map {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  grid-gap: 15px;
+  height: 400px;
+  .recent_accidents__map {
    border: map-get($markup, d);
+  }
+  .recent_accidents__gallery {
+    border: map-get($markup, d);
   }
 
 }

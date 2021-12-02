@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
-import {Landing} from "@pages";
+import {Authorization, Landing} from "@pages";
 
 
 export default connect(
@@ -18,6 +18,7 @@ export default connect(
 
   routes = [
     ['^/$', () => <Landing/>],
+    ['^/authorization$', () => <Authorization/>],
     // Path for / (main page with tasks)
   ]
 

@@ -1,0 +1,59 @@
+@import "~@styles/common.scss";
+
+.auth__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url("~@files/back_auth.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  @include sizes($h: 100%, $w: 100%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .auth__modal {
+    @include sizes($h: 235px, $w: 450px);
+    background: rgba(246, 246, 246, 0.2);
+    box-shadow: $shadow;
+    padding: 40px;
+    .auth__head {
+      display: flex;
+      align-items: center;
+      color: white;
+      margin-bottom: 15px;
+    }
+    .auth__form {
+      text-align: right;
+      label {
+        display: flex;
+        justify-content: center;
+        .form__input {
+          @include sizes($h: 50px, $w: 450px);
+          background: rgba(255, 255, 255, 0.05);
+          display: inline-block;
+          margin-bottom: 15px;
+          border: none;
+          box-shadow: $shadow;
+        }
+        .form__input::placeholder {
+          color: #FFFFFF;
+        }
+      }
+      .form__button {
+        @include sizes($h: 50px, $w: 120px);
+        display: inline-block;
+        border: none;
+        box-shadow: $shadow;
+        background-color: #FFFFFF;
+      }
+      .form__button:hover {
+        background-color: #6D5F69;
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+
+

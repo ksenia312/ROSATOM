@@ -1,0 +1,30 @@
+@import "~@styles/common.scss";
+
+.footer__container {
+  @include sizes($h: 424px, $w: 100%);
+  background-image: url("~@files/footer.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  .footer__content {
+    color: #FFFFFF;
+    margin: 0 123px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .footer__contacts {
+      padding-top: 100px;
+    }
+    .footer__networks {
+      padding-top: 100px;
+    }
+  }
+
+
+
+}

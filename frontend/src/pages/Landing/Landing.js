@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import {Header} from "@components";
+import {Footer, Header} from "@components";
 import style from './Landing.module.scss'
 import {push} from "connected-react-router";
 
@@ -25,8 +25,8 @@ export default connect(
             Мы обнаруживаем факты аварий на нефтепроводах, оцениваем потенциальный ущерб природе, а также продвигаем в
             массы необходимость помощи пострадавшим животным.
           </div>
-
         </div>
+        <Footer />
       </div>
     )
   }

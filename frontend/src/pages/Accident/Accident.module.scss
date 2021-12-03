@@ -4,16 +4,30 @@
   .accident__content {
     display: flex;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: map-get($header, h) + 25px;
     .accident__picture {
-      @include sizes($h: 400px, $w: 600px)
+      @include sizes($h: 450px, $w: 650px);
+      object-fit: cover;
     }
     .accident__description {
       color: #3C3B3B;
-      margin-left: 25px;
+      margin-left: 125px;
       .accident__descrElement {
-        background-color: #3C3B3B;
-        color: #FFFFFF;
+        box-shadow: $shadow;
+        margin-top: 15px;
+        font-weight: bold;
+        h3 {
+          text-align: center;
+          padding: 10px;
+          background-color: #3C3B3B;
+          color: #FFFFFF;
+        }
+        p {
+          text-align: center;
+          padding: 10px;
+          background-color: rgba(196, 196, 196, 0.5);
+          color: #3C3B3B;
+        }
       }
     }
   }

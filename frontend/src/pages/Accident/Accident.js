@@ -1,6 +1,7 @@
 import React from "react"
 import style from './Accident.module.scss'
 import {connect} from "react-redux";
+import {HeaderMini} from "@components";
 
 
 export default connect(
@@ -21,16 +22,27 @@ export default connect(
     })
     return (
       <div className={style.accident__container}>
+        <HeaderMini />
           <div className={style.accident__content}>
             <img className={style.accident__picture} src={accident.img} alt={'img'}/>
             <div className={style.accident__description}>
               <h2>{accident.name}</h2>
               <div className={style.accident__descrElement}>
-                <p>Время аварии:{accident.time}</p>
+                <h3>Время обнаружения аварии</h3>
+                <p>{accident.time}</p>
               </div>
-              <p>Дата аварии: {accident.date}</p>
-              <p>{accident.status}</p>
-              <p>{accident.region}</p>
+              <div className={style.accident__descrElement}>
+                <h3>Дата аварии</h3>
+                <p>{accident.date}</p>
+              </div>
+              <div className={style.accident__descrElement}>
+                <h3>Статус</h3>
+                <p>{accident.status}</p>
+              </div>
+              <div className={style.accident__descrElement}>
+                <h3>Регион обнаружения</h3>
+                <p>{accident.region}</p>
+              </div>
             </div>
           </div>
       </div>

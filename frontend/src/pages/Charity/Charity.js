@@ -23,13 +23,20 @@ export default connect(
                         <div className={style.charity__icon}><i className="far fa-hand-paper"/></div>
                         <Button small light_no_hover>Стать волонтёром</Button>
                     </div>
-                    <div className={style.charity__block}>
-                        <div className={style.charity__icon}><i className="far fa-hand-peace"/></div>
-                        <Button small light_no_hover>Пожертвовать</Button>
-                    </div>
-                    <div className={style.charity__block}>
-                        <div className={style.charity__icon}><i className="far fa-handshake"/></div>
-                        <Button small light_no_hover>Стать спонсором</Button>
+                    <div className={style.charity__info}>
+                        <div className={style.charity__text}>
+                            Нам важно не только вовремя узнавать о факте разлива нефти, но и
+                            получать подтверждение.<br /> Вы можете стать волонтёром, вступив в чат в телеграмме.
+                            При обнаружении потенциальной аварии в вашем регионе Вас уведомят.
+                        </div>
+                        <div className={style.charity__chat}>
+                            <a href={'https://t.me/SaveOil'} target={'_blank'}>
+                                <Button>
+                                    <i className="fab fa-telegram-plane"/>
+                                    Присоединиться к чату волонтёров
+                                </Button>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <Footer />

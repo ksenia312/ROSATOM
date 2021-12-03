@@ -1,14 +1,17 @@
 @import "~@styles/common.scss";
 
 .charity__container{
-  //background-color: #F6F6F6;
-  background-color: #3C3B3B;
+  background-color: #F6F6F6;
+  // background-color: #3C3B3B;
   .charity__possibilities{
     padding: map-get($header, global-h) 0 0 20px;
     margin: 0 auto;
     @include sizes($h: max-content);
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+
+
 
     .charity__block {
       @include sizes($h: 260px, $w: 220px);
@@ -29,6 +32,25 @@
       transform: translate(0, -20px);
       box-shadow: 0 5px 10px 10px rgba(255, 255, 255, 0.2);
     }
+    .charity__info{
+      @include sizes($h: 320px);
+      margin-left: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .charity__text {
+        width: 360px;
+        text-align: center;
+      }
+      .charity__chat {
+        i {
+          color: #F6F6F6;
+          font-size: 2em;
+        }
+      }
+    }
+
   }
 
 

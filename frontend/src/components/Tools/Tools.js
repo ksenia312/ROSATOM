@@ -11,7 +11,7 @@ export default connect(
 
     render() {
         return (
-            <div className={style.tools__container}>
+            <div id={"tools"} className={style.tools__container}>
                 <div className={style.tools__content}>
                     <select className={style.tools__dropdown}>
                         <option value="accident1">Авария 1</option>

@@ -3,18 +3,22 @@ import React from "react";
 import style from './HeaderMini.module.scss'
 
 export default connect(
-  (state) => ({}),
+  (state) => ({
+    pathname: state.router.location.pathname
+  }),
   (dispatch) => ({})
 )(class HeaderMini extends React.Component {
 
 
   render() {
+    console.log(this.props.pathname)
+    const {pathname} = this.props
     return (
         <div className={style.header}>
           <div> </div>
           <nav  className={style.header__nav}>
             <a href={'#'}>Главная</a>
-            <a href={'#'}>Инструменты</a>
+            {pathname === '/cabinet' ? <a href={'#tools'}>Инструменты</a> : <div/>}
             <a href={'#'}>Последние аварии</a>
           </nav>
         </div>

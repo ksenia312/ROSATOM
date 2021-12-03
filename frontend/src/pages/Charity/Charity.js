@@ -32,7 +32,6 @@ export default connect(
                         <Button small light_no_hover>Стать спонсором</Button>
                     </div>
                 </div>
-                
                 <Footer />
             </div>
         )

@@ -3,6 +3,7 @@ import style from './AccidentsGalleryMini.module.scss'
 import {connect} from "react-redux";
 import {push} from "connected-react-router";
 import {AccidentMini} from "@components";
+import classNames from "classnames";
 
 export default connect(
   (store) => ({
@@ -13,13 +14,22 @@ export default connect(
   })
 )
 (class AccidentsGalleryMini extends React.Component {
-
+  constructor(props) {
+    super(props);
+  }
   render() {
     const {accidents_data} = this.props
+    const accidentClassNames = classNames(
+      style.accidents_gallery,
+      {[style.left]: this.props.left},
+      {[style.center]: this.props.center}
+    );
+    console.log(this.props)
     return (
-      <div className={style.accidents_gallery_mini}>
+
+      <div className={accidentClassNames}>
         {
-          Object.values(accidents_data).slice(0,3).map(e => (<AccidentMini
+          Object.values(accidents_data).map(e => (<AccidentMini
               key={e.id}
               id={e.id}
               img={e.img}
@@ -27,7 +37,6 @@ export default connect(
               date={e.date}
               time={e.time}
               status={e.status}
-              region={e.region}
             />
           ))
         }

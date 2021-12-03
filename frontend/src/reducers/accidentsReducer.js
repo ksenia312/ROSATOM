@@ -10,7 +10,6 @@ export const accidentsInitialState = fromJS({
       date: '03.12.2021',
       time: '3.08',
       status: 'Подтверждена, устраняется',
-      region: 'Новгородская область',
       mark: {id: 1, lat: 59.944061, lng: 30.206429}
     },
     2: {
@@ -20,7 +19,6 @@ export const accidentsInitialState = fromJS({
       date: '03.12.2021',
       time: '3.08',
       status: 'Подтверждена, устраняется',
-      region: 'Новгородская область',
       mark: {id: 2, lat: 58.964061, lng: 30.316429}
     },
     3: {
@@ -30,7 +28,6 @@ export const accidentsInitialState = fromJS({
       date: '03.12.2021',
       time: '3.08',
       status: 'Подтверждена, устраняется',
-      region: 'Новгородская область',
       mark:{id: 3, lat: 59.934061, lng: 31.516429}
     },
   },
@@ -46,7 +43,6 @@ export const accidentsInitialState = fromJS({
     date: '03.12.2021',
     time: '3.08',
     status: 'Подтверждена, устраняется',
-    region: 'Новгородская область',
   }
 })
 

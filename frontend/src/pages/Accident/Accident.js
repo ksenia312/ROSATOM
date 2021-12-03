@@ -39,10 +39,6 @@ export default connect(
                 <h3>Статус</h3>
                 <p>{accident.status}</p>
               </div>
-              <div className={style.accident__descrElement}>
-                <h3>Регион обнаружения</h3>
-                <p>{accident.region}</p>
-              </div>
             </div>
           </div>
       </div>

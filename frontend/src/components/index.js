@@ -10,7 +10,9 @@ import ModalReport from "@components/ModalReport/ModalReport";
 import ModalPlane from "@components/ModalPlane/ModalPlane";
 import Goals from "@components/Goals/Goals";
 import Goal from "@components/Goal/Goal";
-import PDF from "@components/PDF/PDF"
+import PDF from "@components/PDF/PDF";
+import Gallery from "@components/Gallery/Gallery";
+
 export {
   Header,
   RecentAccidents,
@@ -24,5 +26,6 @@ export {
   ModalPlane,
   PDF,
   Goals,
-  Goal
+  Goal,
+  Gallery
 }

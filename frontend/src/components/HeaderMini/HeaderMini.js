@@ -30,6 +30,8 @@ export default connect(
           {pathname === '/' ? <a href={'#help'}>Помочь</a> : <div/>}
 
           {pathname === '/charity' ? <a href={'/'}>Главная</a> : <div/>}
+          {pathname === '/request' ? <a href={'/'}>На главную</a> : <div/>}
+          {pathname === '/authorization' ? <a href={'/'}>На главную</a> : <div/>}
         </nav>
       </div>
     )

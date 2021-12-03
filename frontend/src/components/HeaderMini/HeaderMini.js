@@ -16,9 +16,18 @@ export default connect(
         <div className={style.header}>
           <div> </div>
           <nav  className={style.header__nav}>
-            <a href={'#'}>Главная</a>
+            {pathname === '/cabinet' ? <a href={'/'}>Главная</a> : <div/>}
+            {pathname === '/charity' ? <a href={'/'}>Главная</a> : <div/>}
+            {pathname === '/cabinet' ? <a href={'#last'}>Последние аварии</a> : <div/>}
             {pathname === '/cabinet' ? <a href={'#tools'}>Инструменты</a> : <div/>}
-            <a href={'#'}>Последние аварии</a>
+
+
+
+            {pathname === '/' ? <a href={'#warn'}>Сообщить об аварии</a> : <div/>}
+            {pathname === '/' ? <a href={'#goals'}>Цели</a> : <div/>}
+            {pathname === '/' ? <a href={'#help'}>Помочь</a> : <div/>}
+
+            <a href={'#footer'}>Контакты</a>
           </nav>
         </div>
     )

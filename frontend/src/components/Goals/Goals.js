@@ -11,7 +11,7 @@ export default connect(
 
     render() {
         return (
-            <div className={style.goals__container}>
+            <div className={style.goals__container} id="goals">
                 <div className={style.goals__heading}><h3>Цели</h3></div>
                 <div className={style.goals__list}>
                     <Goal />

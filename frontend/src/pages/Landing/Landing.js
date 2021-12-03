@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import {AccidentMini, AccidentsGalleryMini, Footer, Header, Goals} from "@components";
+import {Footer, Header, Goals} from "@components";
 import style from './Landing.module.scss'
 import {push} from "connected-react-router";
 import Button from "@ui/Button";
@@ -16,7 +16,7 @@ export default connect(
     return (
       <div className={style.landing__container}>
         <Header/>
-        <div className={style.content__container}>
+        <div className={style.content__container} id={'warn'}>
             <div className={style.content__button}><Button>Сообщить об аварии</Button></div>
             <div className={style.content__text}>
             Ежегодно в России происходит большое количество чрезвычайных ситуаций, приводящих к экологическому
@@ -29,7 +29,7 @@ export default connect(
           </div>
         </div>
         <Goals />
-          <div className={style.content__charity_container}>
+          <div className={style.content__charity_container} id={'help'}>
               <div className={style.content__button}><Button onClick={this.props.routeToCharity}>Как ещё я могу помочь? <i className="fas fa-arrow-right"/></Button></div>
               <div className={style.content__charity_text}>
                   Благодарим Вас за Ваше неравнодушие и тот вклад, который Вы внесли в дело восстановления и сохранения экологического равновесия на нашей Планете.<br />

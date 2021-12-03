@@ -10,13 +10,13 @@ export default connect(
 
     render() {
         return (
-            <div className={style.footer__container}>
+            <div className={style.footer__container} id="footer">
                 <div className={style.footer__content}>
                     <div className={style.footer__contacts}>
                         <h3>Контактная информация</h3>
-                        <p>адрес</p>
-                        <p>телефон</p>
-                        <p>email</p>
+                        <p>Aдрес</p>
+                        <p>Tелефон</p>
+                        <p>Email</p>
                     </div>
                     <div className={style.footer__networks}>
                         <h3>Мы в соцсетях</h3>

@@ -19,7 +19,7 @@ export default connect(
 
     render() {
       return (
-        <div className={style.recent_accidents__container}>
+        <div className={style.recent_accidents__container} id={'last'}>
           <h2 className={style.recent_accidents_h2}>Потенциальные аварии, обнаруженные за последний час</h2>
           <div className={style.recent_accidents}>
             <div style={{width: '100%'}} className={style.recent_accidents__map}>

@@ -13,13 +13,14 @@
   display: flex;
   justify-content: space-between;
   .header__nav {
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-right: 50px;
     color: #FFFFFF;
     a {
-      padding: 0 5px;
+      padding: 0 10px;
     }
   }
 }

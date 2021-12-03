@@ -6,7 +6,7 @@
   .charity__possibilities{
     padding: map-get($header, global-h) 0 0 20px;
     margin: 0 auto;
-    @include sizes($h: max-content, $w: 100%);
+    @include sizes($h: max-content);
     display: flex;
     justify-content: space-around;
 

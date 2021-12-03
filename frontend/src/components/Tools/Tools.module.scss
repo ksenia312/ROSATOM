@@ -8,8 +8,8 @@
   .tools__content{
     @include paddings;
     .tools__dropdown {
-      @include sizes($h: 100px, $w: 100%);
-      font-size: 36px;
+      @include sizes($h: 60px, $w: 100%);
+      font-size: 28px;
       font-weight: bold;
       outline: none;
       background-color: rgba(60, 59, 59, 0.5);

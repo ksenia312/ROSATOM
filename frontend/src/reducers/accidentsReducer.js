@@ -14,29 +14,35 @@ export const accidentsInitialState = fromJS({
       img: 'https://mcdn.tvzvezda.ru/news/vstrane_i_mire/content/201710171029-jk5e.htm/1.jpg',
       name: 'Авария Москва',
       date: '03.12.2021',
-      time:'3.08',
-      status:'Подтверждена, устраняется',
-      region:'Новгородская область',
+      time: '3.08',
+      status: 'Подтверждена, устраняется',
+      region: 'Новгородская область',
     },
     2: {
       id: 2,
       img: 'https://s0.rbk.ru/v6_top_pics/media/img/5/11/756033672882115.jpg',
       name: 'Авария СПб',
       date: '03.12.2021',
-      time:'3.08',
-      status:'Подтверждена, устраняется',
-      region:'Новгородская область',
+      time: '3.08',
+      status: 'Подтверждена, устраняется',
+      region: 'Новгородская область',
     },
     3: {
       id: 3,
       img: 'https://mcdn.tvzvezda.ru/news/vstrane_i_mire/content/201710171029-jk5e.htm/1.jpg',
       name: 'Авария Тверь',
       date: '03.12.2021',
-      time:'3.08',
-      status:'Подтверждена, устраняется',
-      region:'Новгородская область',
+      time: '3.08',
+      status: 'Подтверждена, устраняется',
+      region: 'Новгородская область',
     },
-  }
+  },
+  modals:
+    {
+      modal_reportPDF: false,
+      modal_reportEXCEL: false,
+      modal_plane: false
+    }
 })
 
 export const accidentsReducer = (state = {}, action) => {
@@ -44,6 +50,16 @@ export const accidentsReducer = (state = {}, action) => {
     case types.USER__FETCH_MARKERS:
       return state
         .mergeDeepIn(['marks'], fromJS(action))
+    case types.CHANGE_VISIBILITY_MODAL:
+      if (action.modal_type.modal_reportPDF) {
+        return state.mergeDeepIn(['modals'], {modal_reportPDF: !state.toJS().modals.modal_reportPDF})
+      }
+      if (action.modal_type.modal_reportEXCEL) {
+        return state.mergeDeepIn(['modals'], {modal_reportEXCEL: !state.toJS().modals.modal_reportEXCEL})
+      }
+      if (action.modal_type.modal_plane) {
+        return state.mergeDeepIn(['modals'], {modal_plane: !state.toJS().modals.modal_plane})
+      }
     default:
       return state
   }

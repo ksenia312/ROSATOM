@@ -13,3 +13,6 @@ export const doFetchMarkers = (dispatch, successChecker) => {
     }
   ).then(successChecker)
 }
+export const changeVisibilityModal = (dispatch, modal_type, successChecker) => {
+  return dispatch({type: types.CHANGE_VISIBILITY_MODAL, modal_type:modal_type})
+}

@@ -4,7 +4,7 @@
   @include sizes($h: 100px, $w: 100px);
   border-radius: 100px;
   border: 6px solid #F6F6F6;
-  margin: 10px;
+  //margin: 10px;
   box-sizing: border-box;
   box-shadow: $shadow;
 
@@ -14,8 +14,17 @@
   padding: 0 10px;
 
   .goal__icon {
-    font-size: 3em;
+    font-size: 50px;
+  }
+  .goal__icon.legs {
+    padding-left:5px;
     transform: rotate(-45deg);
+  }
+  .goal__icon.tree {
+    padding-left:13px;
+  }
+  .goal__icon.traces {
+    padding-left:8px;
   }
   .goal__description {
     padding-left: 40px;

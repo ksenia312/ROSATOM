@@ -7,7 +7,7 @@ import {AccidentsGalleryMini, Marker} from "@components";
 
 export default connect(
   (state) => ({
-    marks: state.accidents.getIn(['marks']).toJS(),
+    accidents_data: state.accidents.getIn(['accidents_data']).toJS(),
   }),
   (dispatch) => ({})
 )(class RecentAccidents extends React.Component {
@@ -29,7 +29,7 @@ export default connect(
                 defaultZoom={this.props.zoom}
                 yesIWantToUseGoogleMapApiInternals={true}
               >
-                {Object.values(this.props.marks).map((mark) => <Marker key={mark.id} lat={mark.lat} lng={mark.lng}/>)}
+                {Object.values(this.props.accidents_data).map((el) => <Marker key={el.id} lat={el.mark.lat} lng={el.mark.lng}/>)}
               </GoogleMapReact>
 
             </div>

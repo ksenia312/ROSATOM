@@ -2,12 +2,6 @@ import {fromJS} from "immutable"
 import {types} from "@reducers/common";
 
 export const accidentsInitialState = fromJS({
-  marks: {
-    1: {id: 1, lat: 59.944061, lng: 30.206429},
-    2: {id: 2, lat: 58.964061, lng: 30.316429},
-    3: {id: 3, lat: 59.934061, lng: 31.516429},
-    4: {id: 4, lat: 59.814061, lng: 30.496429},
-  },
   accidents_data: {
     1: {
       id: 1,
@@ -17,6 +11,7 @@ export const accidentsInitialState = fromJS({
       time: '3.08',
       status: 'Подтверждена, устраняется',
       region: 'Новгородская область',
+      mark: {id: 1, lat: 59.944061, lng: 30.206429}
     },
     2: {
       id: 2,
@@ -26,6 +21,7 @@ export const accidentsInitialState = fromJS({
       time: '3.08',
       status: 'Подтверждена, устраняется',
       region: 'Новгородская область',
+      mark: {id: 2, lat: 58.964061, lng: 30.316429}
     },
     3: {
       id: 3,
@@ -35,27 +31,28 @@ export const accidentsInitialState = fromJS({
       time: '3.08',
       status: 'Подтверждена, устраняется',
       region: 'Новгородская область',
+      mark:{id: 3, lat: 59.934061, lng: 31.516429}
     },
   },
   modals: {
-      modal_reportPDF: false,
-      modal_reportEXCEL: false,
-      modal_plane: false
-    },
+    modal_reportPDF: false,
+    modal_reportEXCEL: false,
+    modal_plane: false
+  },
   dropdown: {
-      id: 1,
-      img: 'https://mcdn.tvzvezda.ru/news/vstrane_i_mire/content/201710171029-jk5e.htm/1.jpg',
-      name: 'Авария Москва',
-      date: '03.12.2021',
-      time: '3.08',
-      status: 'Подтверждена, устраняется',
-      region: 'Новгородская область',
-    }
+    id: 1,
+    img: 'https://mcdn.tvzvezda.ru/news/vstrane_i_mire/content/201710171029-jk5e.htm/1.jpg',
+    name: 'Авария Москва',
+    date: '03.12.2021',
+    time: '3.08',
+    status: 'Подтверждена, устраняется',
+    region: 'Новгородская область',
+  }
 })
 
 export const accidentsReducer = (state = {}, action) => {
   switch (action.type) {
-    case types.USER__FETCH_MARKERS:
+    case types.USER__FETCH_ACCIDENTS:
       return state
         .mergeDeepIn(['marks'], fromJS(action))
     case types.CHANGE_VISIBILITY_MODAL:

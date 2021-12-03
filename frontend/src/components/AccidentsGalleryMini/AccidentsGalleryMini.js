@@ -24,7 +24,6 @@ export default connect(
       {[style.left]: this.props.left},
       {[style.center]: this.props.center}
     );
-    console.log(this.props)
     return (
 
       <div className={accidentClassNames}>

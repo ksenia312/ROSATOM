@@ -2,7 +2,7 @@ import {fromJS} from "immutable"
 import {types} from "@reducers/common";
 
 export const accidentsInitialState = fromJS({
-  accidents_data: {
+  accidents_data: {/*
     1: {
       id: 1,
       img: 'https://mcdn.tvzvezda.ru/news/vstrane_i_mire/content/201710171029-jk5e.htm/1.jpg',
@@ -29,7 +29,7 @@ export const accidentsInitialState = fromJS({
       time: '3.08',
       status: 'Подтверждена, устраняется',
       mark:{id: 3, lat: 59.934061, lng: 31.516429}
-    },
+    },*/
   },
   modals: {
     modal_reportPDF: false,
@@ -49,8 +49,9 @@ export const accidentsInitialState = fromJS({
 export const accidentsReducer = (state = {}, action) => {
   switch (action.type) {
     case types.USER__FETCH_ACCIDENTS:
+      console.log(state.set('accidents_data', fromJS(action.accidents_data)).toJS())
       return state
-        .mergeDeepIn(['marks'], fromJS(action))
+        .set('accidents_data', fromJS(action.accidents_data))
     case types.CHANGE_VISIBILITY_MODAL:
       if (action.modal_type.modal_reportPDF) {
         return state.mergeDeepIn(['modals'], {modal_reportPDF: !state.toJS().modals.modal_reportPDF})

@@ -1,9 +1,9 @@
-import {types} from "@reducers/common";
+import {fetchWrapper, types} from "@reducers/common";
 
 export const doFetchAccidents = (dispatch, successChecker) => {
   return fetchWrapper(
     dispatch,
-    'https://backend-oil.herokuapp.com/backend/db/all_users',
+    'https://backend-oil.herokuapp.com/data/test_output',
     types.USER__FETCH_ACCIDENTS,
     {
       method: 'GET',

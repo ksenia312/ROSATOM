@@ -8,7 +8,17 @@ import HeaderMini from "@components/HeaderMini/HeaderMini";
 import Tools from "@components/Tools/Tools";
 import ModalReport from "@components/ModalReport/ModalReport";
 import ModalPlane from "@components/ModalPlane/ModalPlane";
-
+import PDF from "@components/PDF/PDF"
 export {
-  Header, RecentAccidents, Footer, Marker, AccidentMini, AccidentsGalleryMini, HeaderMini, Tools, ModalReport, ModalPlane
+  Header,
+  RecentAccidents,
+  Footer,
+  Marker,
+  AccidentMini,
+  AccidentsGalleryMini,
+  HeaderMini,
+  Tools,
+  ModalReport,
+  ModalPlane,
+  PDF
 }

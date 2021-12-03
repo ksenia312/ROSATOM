@@ -1,0 +1,11 @@
+@import "~@styles/common.scss";
+
+.PDF__container {
+  border: 1px black solid;
+  .PDF {
+    width: 100%;
+    position: fixed;
+    top:0; left:0;
+    height: 100%;
+  }
+}

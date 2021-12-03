@@ -25,7 +25,6 @@ export default connect(
 )(class PDF extends React.Component {
 
   render() {
-    console.log(this.props.data)
     return (
       <div className={style.PDF__container}>
         <PDFViewer className={style.PDF}>

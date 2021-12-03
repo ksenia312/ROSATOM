@@ -21,14 +21,18 @@ export default connect(
     })
     return (
       <div className={style.accident__container}>
-        <h2>{accident.name}</h2>
-        <img className={style.accident__picture} src={accident.img} alt={'img'}/>
-        <div className={style.accident__description}>
-          <p>{accident.time}</p>
-          <p>{accident.date}</p>
-          <p>{accident.status}</p>
-          <p>{accident.region}</p>
-        </div>
+          <div className={style.accident__content}>
+            <img className={style.accident__picture} src={accident.img} alt={'img'}/>
+            <div className={style.accident__description}>
+              <h2>{accident.name}</h2>
+              <div className={style.accident__descrElement}>
+                <p>Время аварии:{accident.time}</p>
+              </div>
+              <p>Дата аварии: {accident.date}</p>
+              <p>{accident.status}</p>
+              <p>{accident.region}</p>
+            </div>
+          </div>
       </div>
     )
   }

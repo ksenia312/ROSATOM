@@ -5,7 +5,7 @@
   background-color: #3C3B3B;
   box-shadow: $shadow;
   padding: 15px;
-  margin-bottom: 15px;
+  margin-top: 20px;
 
   .accident_mini__content {
     @include sizes($h: 100%, $w: 100%);
@@ -30,4 +30,7 @@
       box-shadow: $shadow;
     }
   }
+}
+.accident_mini__container:hover {
+  transform: translate(0, -10px);
 }

@@ -26,8 +26,6 @@ export default connect(
             массы необходимость помощи пострадавшим животным.
           </div>
         </div>
-
-        <AccidentsGalleryMini/>
         <Footer />
       </div>
     )

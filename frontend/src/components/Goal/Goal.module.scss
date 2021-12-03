@@ -1,41 +1,35 @@
 @import "~@styles/common.scss";
 
 .goal__container {
-    @include sizes($h: 100px, $w: 100px);
-    border-radius: 100px;
-    margin: 10px;
-    border: 6px solid #F6F6F6;
-    box-sizing: border-box;
-    box-shadow: $shadow;
-    transition: all 0.8s ease-in;
-    i {
-      padding-top: 20px;
+  @include sizes($h: 100px, $w: 100px);
+  border-radius: 100px;
+  border: 6px solid #F6F6F6;
+  margin: 10px;
+  box-sizing: border-box;
+  box-shadow: $shadow;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0 10px;
 
-      font-size: 3em;
-      transform: rotate(-45deg);
-    }
-  p {
+  .goal__icon {
+    font-size: 3em;
+    transform: rotate(-45deg);
+  }
+  .goal__description {
+    padding-left: 40px;
     color: transparent;
     font-weight: bold;
   }
 }
 .goal__container:hover {
-   border: none;
-   background-color: #3C3B3B;
-   width: 700px;
-
-  i {
-    color: transparent;
-    transition-duration: 1ms;
-  }
-
-  p {
+  transition-duration: 2s;
+  border: none;
+  background-color: #3C3B3B;
+  width: 700px;
+  .goal__description {
+    transition-delay: 0.8s;
     color: white;
-    transition-delay: 0.5s;
-    transition-timing-function: ease-out;
   }
- }
+}

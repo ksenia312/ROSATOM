@@ -11,8 +11,8 @@ export default connect(
     render() {
         return (
             <div className={style.goal__container}>
-                <i className="fas fa-shoe-prints"/>
-                <p>предотвратить чрезвычайные ситуации</p>
+                <div className={style.goal__icon}><i className="fas fa-shoe-prints"/></div>
+                <div className={style.goal__description}>предотвратить чрезвычайные ситуации</div>
             </div>
         )
     }

@@ -40,20 +40,13 @@ export default connect(
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.doFetchForm(this.state.form, () => true);
-    if (this.props.access_token === '') {
-      this.props.routeToLanding()
-    } else {
-      this.props.routeToCabinet()
-    }
-  }
-
-  redirection() {
-    if (this.props.access_token === '') {
-      this.props.routeToLanding
-    } else {
-      this.props.routeToCabinet
-    }
+    this.props.doFetchForm(this.state.form, (r) => {
+      if (this.props.access_token) {
+        this.props.routeToCabinet()
+      } else {
+        alert('Ty again!')
+      }}
+    )
   }
 
   render() {

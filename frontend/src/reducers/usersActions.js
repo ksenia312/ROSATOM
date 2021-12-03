@@ -14,7 +14,6 @@ export const doFetchUser = (dispatch, successChecker) => {
   ).then(successChecker)
 }
 export const doFetchForm = (dispatch, data, successChecker) => {
-  console.log(data)
   return fetchWrapper(
     dispatch,
     'https://backend-oil.herokuapp.com/token',

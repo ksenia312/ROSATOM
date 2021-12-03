@@ -18,7 +18,7 @@ export default connect(
     key: 'AIzaSyBCIZwuZjEa9gW_CDjwJx6ySCJjQHhuqAM'
   };
   render() {
-    const {accidentID, key} = this.props
+    const {accidentID} = this.props
     let accident = {}
     Object.values(this.props.accidents_data).map(item => {
       if (item.id === parseInt(accidentID))

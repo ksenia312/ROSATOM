@@ -14,9 +14,9 @@ export default connect(
             <div className={style.goals__container} id="goals">
                 <div className={style.goals__heading}><h3>Цели</h3></div>
                 <div className={style.goals__list}>
-                    <Goal />
-                    <Goal />
-                    <Goal />
+                    <Goal icon={'fas fa-shoe-prints'} text={'предотвратить чрезвычайные ситуации'} legs/>
+                    <Goal icon={'fas fa-tree'} text={'сохранить природу'} tree/>
+                    <Goal icon={'fas fa-paw'} text={'помочь животным'} traces/>
                 </div>
             </div>
         )

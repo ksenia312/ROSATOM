@@ -31,7 +31,6 @@ export default connect(
           Object.values(accidents_data).map(e => (<AccidentMini
               key={e.id}
               id={e.id}
-              img={e.img}
               name={e.name}
               date={e.date}
               time={e.time}

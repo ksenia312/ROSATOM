@@ -7,6 +7,7 @@ import {Authorization, Cabinet, Landing, Charity, Accident, PDF, ModalRequest} f
 export default connect(
   (state) => ({
     location: state.router.location.pathname,
+    access_token: state.users.getIn(['access_token'])
   }),
   () => ({})
 )(class App extends React.Component {
@@ -17,7 +18,6 @@ export default connect(
 
   routes = [
     ['^/$', () => <Landing/>],
-    ['^/cabinet', () => <Cabinet/>],
     ['^/authorization', () => <Authorization/>],
     ['^/accident', () => <Accident/>] ,
     ['^/pdf', () => <PDF/>],
@@ -26,10 +26,12 @@ export default connect(
     // Path for / (main page with tasks)
   ]
 
-
   route = path => this.routes.find(r => path.match(r[0]) !== null)?.[1]?.()
 
   render() {
+    if (this.props.access_token && this.routes.length<7) {
+      this.routes.push(['^/cabinet', () => <Cabinet/>])
+    }
     return (
       <>
         {this.route(this.props.location)}

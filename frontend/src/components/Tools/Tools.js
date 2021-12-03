@@ -25,7 +25,6 @@ export default connect(
       if (item.id === parseInt(event.target.value))
         data = item
     })
-    console.log(event)
     this.props.setDropdownValue(data)
 
   }

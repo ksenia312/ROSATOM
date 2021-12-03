@@ -11,7 +11,7 @@ export default connect(
   })
 )(class Cabinet extends React.Component {
   componentDidMount() {
-    this.props.doFetchAccidents(r => console.log(r))
+    this.props.doFetchAccidents(r => true)
   }
 
   render() {

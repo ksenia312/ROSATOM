@@ -8,7 +8,6 @@ import HeaderMini from "@components/HeaderMini/HeaderMini";
 
 export default connect(
   (state) => ({
-    users: state.users.getIn(['users_data']).toJS(),
     access_token: state.users.getIn(['access_token'])
   }),
   (dispatch) => ({

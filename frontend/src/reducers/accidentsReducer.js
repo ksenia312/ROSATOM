@@ -49,7 +49,6 @@ export const accidentsInitialState = fromJS({
 export const accidentsReducer = (state = {}, action) => {
   switch (action.type) {
     case types.USER__FETCH_ACCIDENTS:
-      console.log(state.set('accidents_data', fromJS(action.accidents_data)).toJS())
       return state
         .set('accidents_data', fromJS(action.accidents_data))
     case types.CHANGE_VISIBILITY_MODAL:
@@ -64,7 +63,6 @@ export const accidentsReducer = (state = {}, action) => {
       }
       return state
     case types.SET_DROPDOWN_VALUE:
-      console.log(action)
       return state
         .mergeDeepIn(['dropdown'], fromJS(action.data))
     default:

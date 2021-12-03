@@ -1,7 +1,7 @@
 @import "~@styles/common.scss";
 
 .tools__container{
-  background-color: #a2a2a2;
+  background-color: #F6F6F6;
   margin: 0;
   padding: 0;
   height: max-content;
@@ -10,6 +10,7 @@
     .tools__dropdown {
       @include sizes($h: 100px, $w: 100%);
       font-size: 36px;
+      font-weight: bold;
       outline: none;
       background-color: rgba(60, 59, 59, 0.5);
       padding: 0 10px;
@@ -22,6 +23,7 @@
       box-shadow: $shadow;
     }
     .tools__buttons {
+      font-weight: bold;
       margin: 30px 0;
       display: flex;
       justify-content: center;

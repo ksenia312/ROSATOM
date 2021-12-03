@@ -1,16 +1,20 @@
 @import "~@styles/common.scss";
 
-.recent_accidents__container{
-
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-gap: 25px;
-
-  .recent_accidents__map {
-
+.recent_accidents__container {
+  .recent_accidents_h2{
+    padding: 15px 0;
   }
-  .recent_accidents__gallery {
+  .recent_accidents {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 25px;
 
+    .recent_accidents__map {
+
+    }
+
+    .recent_accidents__gallery {
+
+    }
   }
-
 }

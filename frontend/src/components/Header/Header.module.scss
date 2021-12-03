@@ -11,34 +11,13 @@
   @include sizes($h: map-get($header, global-h), $w: 100%);
   text-align: center;
 
-  .header {
-    @include sizes($h: map-get($header, h), $w: 100%);
-    padding: 5px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-image: url("~@files/header.png");
-    background-repeat: no-repeat;
-    background-size: 100% 600%;
-    display: flex;
-    justify-content: space-between;
-    .header__nav {
-      display: flex;
-      width: 400px;
-      justify-content: space-between;
-      align-items: center;
-      padding-right: 50px;
-
-    }
-  }
 
   .tagline__container {
     .tagline {
-      color: rgba(227, 227, 227, 0.7);
-      letter-spacing: 10px;
+      color: rgba(196, 196, 196, 0.7);
+      letter-spacing: 15px;
       margin-top: map-get($header, h)+50px;
-      font-size: 96px;
+      font-size: 72px;
       font-weight: bold;
       text-shadow: 1px 1px 2px #a2a2a2, 0 0 1em rgba(255, 255, 255, 0.5);
     }

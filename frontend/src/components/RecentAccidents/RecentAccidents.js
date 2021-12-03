@@ -12,8 +12,8 @@ export default connect(
   (dispatch) => ({})
 )(class RecentAccidents extends React.Component {
     static defaultProps = {
-      center: {lat: 59.95, lng: 30.33},
-      zoom: 11,
+      center: {lat: 74.449563, lng: 63.029048},
+      zoom: 4,
       key: 'AIzaSyBCIZwuZjEa9gW_CDjwJx6ySCJjQHhuqAM'
     };
 

@@ -1,0 +1,10 @@
+@import "~@styles/common.scss";
+
+.statistic__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding:50px 20px 0 20px;
+  flex-wrap: wrap;
+}

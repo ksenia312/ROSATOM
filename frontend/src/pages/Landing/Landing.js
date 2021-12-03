@@ -8,8 +8,7 @@ import Button from "@ui/Button";
 export default connect(
   (state) => ({}),
   (dispatch) => ({
-    routeToAuth: () => dispatch(push('/authorization')),
-    routeToTest: () => dispatch(push('/test')),
+    routeToCharity: () => dispatch(push('/charity')),
   })
 )(class Landing extends React.Component {
 
@@ -31,7 +30,7 @@ export default connect(
         </div>
         <Goals />
           <div className={style.content__charity_container}>
-              <div className={style.content__button}><Button>Как ещё я могу помочь? <i className="fas fa-arrow-right"/></Button></div>
+              <div className={style.content__button}><Button onClick={this.props.routeToCharity}>Как ещё я могу помочь? <i className="fas fa-arrow-right"/></Button></div>
               <div className={style.content__charity_text}>
                   Благодарим Вас за Ваше неравнодушие и тот вклад, который Вы внесли в дело восстановления и сохранения экологического равновесия на нашей Планете.<br />
                   Каждое пожертвование ценно для нас не только в своем денежном эквиваленте, но и в проявлении понимания и заботы о нашем общем будущем. Заботясь о природе, мы заботимся, в первую очередь о себе и своих детях.

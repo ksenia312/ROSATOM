@@ -1,11 +1,12 @@
 @import "~@styles/common.scss";
 
 .charity__container{
+  //background-color: #F6F6F6;
   background-color: #3C3B3B;
   .charity__possibilities{
     padding: map-get($header, global-h) 0 0 20px;
     margin: 0 auto;
-    @include sizes($h: max-content, $w: 1130px/1376px * 100%);
+    @include sizes($h: max-content, $w: 100%);
     display: flex;
     justify-content: space-around;
 
@@ -29,5 +30,6 @@
       box-shadow: 0 5px 10px 10px rgba(255, 255, 255, 0.2);
     }
   }
+
 
 }

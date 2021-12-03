@@ -18,15 +18,15 @@ export default connect(
                         <option value="accident2">Авария 2</option>
                         <option value="accident3">Авария 3</option>
                     </select>
-                </div>
-                <div className={style.tools__buttons}>
-                    <div className={style.tools__leftCol}>
-                        <Button>1</Button>
-                        <Button>2</Button>
-                    </div>
-                    <div className={style.tools__rightCol}>
-                        <Button>3</Button>
-                        <Button>4</Button>
+                    <div className={style.tools__buttons}>
+                        <div className={style.tools_Column}>
+                            <Button><i className="fas fa-file-pdf"/> Сформировать отчёт по аварии</Button>
+                            <Button><i className="fas fa-file-excel"/> Сформировать сводный отчёт</Button>
+                        </div>
+                        <div className={style.tools_Column}>
+                            <Button><i className="fas fa-plane"/> Отправить БПЛА</Button>
+                            <Button><i className="fas fa-newspaper"/> Выложить новость</Button>
+                        </div>
                     </div>
                 </div>
             </div>

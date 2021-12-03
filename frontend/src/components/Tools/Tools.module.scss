@@ -4,6 +4,7 @@
   background-color: #a2a2a2;
   margin: 0;
   padding: 0;
+  height: max-content;
   .tools__content{
     @include paddings;
     .tools__dropdown {
@@ -21,25 +22,18 @@
       box-shadow: $shadow;
     }
     .tools__buttons {
+      margin: 30px 0;
       display: flex;
-      justify-content: space-around;
-      .tools__leftCol{
+      justify-content: center;
+      i {
+        font-size: 2em;
+      }
+      .tools_Column {
         display: flex;
-
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px 20px;
       }
-      .tools__rightCol{
-
-      }
-
-
-
-
-
-
     }
-
-
   }
-
-
 }

@@ -5,31 +5,34 @@ const Button = styled.button
   `
     position: relative;
     border: none;
-    min-width: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // min-width: max-content;
     height: ${props => {
-      if (props.small) {return 70}
+      if (props.small) {return 50}
       else if (props.large) {return 130}
       else {return 100}
     }}px;
     width: ${props => {
-      if (props.small) {return 230}
+      if (props.small) {return 130}
       else if (props.large) {return 430}
       else {return 330}
     }}px;
     border-radius: ${props => {
-      if (props.small) {return 90}
+      if (props.small) {return 80}
       else if (props.large) {return 110}
       else {return 100}
     }}px;
     font-size: ${props => {
-      if (props.small) {return 24}
-      else if (props.large) {return 48}
-      else {return 36}
+      if (props.small) {return 18}
+      else if (props.large) {return 36}
+      else {return 24}
     }}px;;
     color: #ffffff;
     letter-spacing: 2px;
     margin: 2px;
-    padding: 0 15px;
+    padding: 0 30px;
     background-color: ${props => {
       if (props.red) {return `#9b1b1e`}
       else if (props.blue) {return `#1f3781`}

@@ -1,1 +1,1 @@
-web: cd ./frontend/build && serve -s
+web: serve -s frontend/build

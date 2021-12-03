@@ -1,15 +1,12 @@
 {
-    "name": "predeployment-hook",
+    "name": "deployment",
     "version": "1.0.0",
     "license": "UNLICENSED",
     "engines": {
       "npm": "8.2.0"
     },
     "dependencies": {
-      "serve": "^13.0.2",
-      "webpack-cli": "^3.3.12"
+      "serve": "^13.0.2"
     },
-    "scripts": {
-      "heroku-prebuild": "cd frontend && npm install && npm run build"
-    }
+    "scripts": {}
   }

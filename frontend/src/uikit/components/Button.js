@@ -8,6 +8,7 @@ const Button = styled.button
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
     // min-width: max-content;
     height: ${props => {
       if (props.small) {return 70}
@@ -17,7 +18,7 @@ const Button = styled.button
     width: ${props => {
       if (props.small) {return 240}
       else if (props.large) {return 430}
-      else {return 330}
+      else {return 360}
     }}px;
     border-radius: ${props => {
       if (props.small) {return 80}
@@ -32,7 +33,7 @@ const Button = styled.button
     color: ${props => {
       if (props.light) {return `#3C3B3B`}
       else {return `#ffffff`}
-    }};      
+    }};    
     letter-spacing: 2px;
     margin: 2px;
     padding: 0 30px;

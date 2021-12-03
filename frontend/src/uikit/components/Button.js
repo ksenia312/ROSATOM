@@ -32,6 +32,7 @@ const Button = styled.button
     }}px;;
     color: ${props => {
       if (props.light) {return `#3C3B3B`}
+      else if (props.light_no_hover) {return `#3C3B3B`}
       else {return `#ffffff`}
     }};    
     letter-spacing: 2px;
@@ -41,7 +42,8 @@ const Button = styled.button
       if (props.red) {return `#9b1b1e`}
       else if (props.blue) {return `#1f3781`}
       else if (props.green) {return `#21981e`}
-      else if (props.light) {return `#`}
+      else if (props.light) {return `#F6F6F6`}
+      else if (props.light_no_hover) {return `#F6F6F6`}
       else {return `#3C3B3B`}
     }};
     :hover {
@@ -50,18 +52,26 @@ const Button = styled.button
         else if (props.blue) {return `#152456`}
         else if (props.green) {return `#125611`}
         else if (props.light) {return `#3C3B3B`}
+        else if (props.light_no_hover) {return `#F6F6F6`}
         else {return `#262525`}
       }};
-      color: #F6F6F6;
+      color: ${props => {
+        if (props.light_no_hover) {return `#3C3B3B`}  
+        else {return `#F6F6F6`}
+      }};  
     }
     :active {
       background-color: ${props => {
         if (props.red) {return `#490d0e`}
         else if (props.blue) {return `#0f1a41`}
         else if (props.green) {return `#0a2f09`}
+        else if (props.light_no_hover) {return `#F6F6F6`}
         else {return `#000000`}
       }};
-      color: #ffffff;
+      color: ${props => {
+        if (props.light_no_hover) {return `#3C3B3B`}
+        else {return `#F6F6F6`}
+      }};
     }
   `
 

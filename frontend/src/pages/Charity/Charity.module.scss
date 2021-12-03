@@ -1,0 +1,33 @@
+@import "~@styles/common.scss";
+
+.charity__container{
+  background-color: #3C3B3B;
+  .charity__possibilities{
+    padding: map-get($header, global-h) 0 0 20px;
+    margin: 0 auto;
+    @include sizes($h: max-content, $w: 1130px/1376px * 100%);
+    display: flex;
+    justify-content: space-around;
+
+    .charity__block {
+      @include sizes($h: 260px, $w: 220px);
+      background-color: #3C3B3B;
+      border: white 2px dashed;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 15px;
+      margin: 35px 0;
+      .charity__icon {
+        color: #F6F6F6;
+        font-size: 6em;
+      }
+    }
+    .charity__block:hover {
+      transform: translate(0, -20px);
+      box-shadow: 0 5px 10px 10px rgba(255, 255, 255, 0.2);
+    }
+  }
+
+}

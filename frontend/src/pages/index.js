@@ -4,6 +4,7 @@ import Cabinet from "@pages/Cabinet/Cabinet";
 import Charity from "@pages/Charity/Charity";
 import Accident from "@pages/Accident/Accident";
 import PDF from "@pages/PDF/PDF";
+import ModalRequest from "@pages/ModalRequest/ModalRequest";
 
 export {
   Landing,
@@ -11,5 +12,6 @@ export {
   Cabinet,
   Charity,
   Accident,
-  PDF
+  PDF,
+  ModalRequest
 }

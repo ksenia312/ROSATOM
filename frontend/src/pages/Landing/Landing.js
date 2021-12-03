@@ -9,6 +9,7 @@ export default connect(
   (state) => ({}),
   (dispatch) => ({
     routeToCharity: () => dispatch(push('/charity')),
+    routeToRequest: () => dispatch(push('/request')),
   })
 )(class Landing extends React.Component {
 
@@ -17,7 +18,7 @@ export default connect(
       <div className={style.landing__container}>
         <Header/>
         <div className={style.content__container} id={'warn'}>
-            <div className={style.content__button}><Button>Сообщить об аварии</Button></div>
+            <div className={style.content__button}><Button onClick={this.props.routeToRequest}>Сообщить об аварии</Button></div>
             <div className={style.content__text}>
             Ежегодно в России происходит большое количество чрезвычайных ситуаций, приводящих к экологическому
             ущербу, в том числе, нефтеразливы.<br />

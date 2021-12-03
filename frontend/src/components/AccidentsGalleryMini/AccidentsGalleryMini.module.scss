@@ -1,0 +1,33 @@
+@import "~@styles/common.scss";
+
+.accident_mini__container {
+  @include sizes($h: 270px, $w: 370px);
+  background-color: #3C3B3B;
+  box-shadow: $shadow;
+  padding: 15px;
+  margin-bottom: 15px;
+
+  .accident_mini__content {
+    @include sizes($h: 100%, $w: 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .accident_mini__picture {
+      background-color: #ffffff;
+      @include sizes($h: 170px, $w: 100%);
+      box-shadow: $shadow;
+    }
+
+    .accident_mini__description {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: rgba(246, 246, 246, 0.5);
+      @include sizes($h: 85px, $w: 100%);
+      color: #FFFFFF;
+      box-shadow: $shadow;
+    }
+  }
+}

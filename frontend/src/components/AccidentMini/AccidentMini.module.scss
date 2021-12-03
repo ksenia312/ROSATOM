@@ -1,27 +1,30 @@
 @import "~@styles/common.scss";
 
-.event__container {
-  @include sizes($h: 270px, $w: 370px);
+.accident_mini__container {
+  @include sizes($h: 150px, $w: auto);
   background-color: #3C3B3B;
   box-shadow: $shadow;
   padding: 15px;
   margin-bottom: 15px;
-  .event__content {
+
+  .accident_mini__content {
     @include sizes($h: 100%, $w: 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    .event__picture {
+
+    .accident_mini__picture {
       background-color: #ffffff;
-      @include sizes($h: 170px, $w: 100%);
+      @include sizes($h: 120px, $w: 100%);
       box-shadow: $shadow;
     }
-    .event__description{
+
+    .accident_mini__description {
       display: flex;
       justify-content: center;
       align-items: center;
 
-      background-color: rgba(246, 246, 246, 0.5);
+      background-color: rgba(246, 246, 246, 0.1);
       @include sizes($h: 85px, $w: 100%);
       color: #FFFFFF;
       box-shadow: $shadow;

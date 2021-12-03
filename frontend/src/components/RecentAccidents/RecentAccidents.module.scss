@@ -3,14 +3,14 @@
 .recent_accidents__container{
 
   display: grid;
-  grid-template-columns: 1fr 400px;
-  grid-gap: 15px;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 25px;
 
   .recent_accidents__map {
-   border: map-get($markup, d);
+
   }
   .recent_accidents__gallery {
-    border: map-get($markup, d);
+
   }
 
 }

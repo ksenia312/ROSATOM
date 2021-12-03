@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import {Footer, GalleryBlock, Header} from "@components";
+import {AccidentMini, AccidentsGalleryMini, Footer, Header} from "@components";
 import style from './Landing.module.scss'
 import {push} from "connected-react-router";
 
@@ -27,7 +27,7 @@ export default connect(
           </div>
         </div>
 
-        <GalleryBlock />
+        <AccidentsGalleryMini/>
         <Footer />
       </div>
     )

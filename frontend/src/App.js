@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
 import {Authorization, Cabinet, Landing} from "@pages";
+import Accident from "@pages/Accident/Accident";
 
 
 
@@ -16,11 +17,11 @@ export default connect(
     location: PropTypes.string.isRequired,
   }
 
-
   routes = [
     ['^/$', () => <Landing/>],
     ['^/cabinet', () => <Cabinet/>],
     ['^/authorization', () => <Authorization/>],
+    ['^/accident', () => <Accident/>] ,//
     // Path for / (main page with tasks)
   ]
 

@@ -19,12 +19,12 @@ const buildMiddleware = () => {
 export default createStore(
   combineReducers({
     users: usersReducer,
-    marks:accidentsReducer,
+    accidents:accidentsReducer,
     router: connectRouter(history)
   }),
   {
     users: usersInitialState,
-    marks:accidentsInitialState
+    accidents:accidentsInitialState
   },
   composeWithDevTools(
     applyMiddleware(routerMiddleware(history)),

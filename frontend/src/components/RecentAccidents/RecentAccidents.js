@@ -2,12 +2,12 @@ import {connect} from "react-redux";
 import React from "react";
 import style from './RecentAccidents.module.scss'
 import GoogleMapReact from 'google-map-react';
-import {Marker} from "@components";
+import {AccidentsGalleryMini, Marker} from "@components";
 
 
 export default connect(
   (state) => ({
-    marks: state.marks.getIn(['marks']).toJS(),
+    marks: state.accidents.getIn(['marks']).toJS(),
   }),
   (dispatch) => ({})
 )(class RecentAccidents extends React.Component {
@@ -33,7 +33,7 @@ export default connect(
 
           </div>
 
-          <div className={style.recent_accidents__gallery}>галерея</div>
+          <AccidentsGalleryMini/>
         </div>
       )
     }

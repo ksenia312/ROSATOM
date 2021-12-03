@@ -1,10 +1,7 @@
 import React from 'react'
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
-import {Authorization, Cabinet, Landing, Charity} from "@pages";
-import Accident from "@pages/Accident/Accident";
-import {PDF} from "@components";
-
+import {Authorization, Cabinet, Landing, Charity, Accident, PDF} from "@pages";
 
 
 export default connect(

@@ -13,7 +13,7 @@ export default connect(
     const {id, img, name} = this.props
     return (
       <div id={'registry'} className={style.gallery__container}>
-        <h2> Реестр всех последних потенциальных аварий</h2>
+        <h2>Реестр устраненных аварий</h2>
         <AccidentsGalleryMini center/>
       </div>
     )

@@ -23,7 +23,7 @@ export default connect(
     ['^/cabinet', () => <Cabinet/>],
     ['^/authorization', () => <Authorization/>],
     ['^/accident', () => <Accident/>] ,
-    ['^/pdf', () => <PDF/>]
+    ['^/pdf', () => <PDF/>],
     ['^/charity', () => <Charity/>] ,
     // Path for / (main page with tasks)
   ]

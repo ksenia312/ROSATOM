@@ -8,7 +8,7 @@ import {changeVisibilityModal} from "@reducers/accidentsActions";
 
 export default connect(
   (state) => ({
-    marks: state.accidents.getIn(['marks']).toJS(),
+    accidents_data: state.accidents.getIn(['accidents_data']).toJS(),
     modals: state.accidents.getIn(['modals']).toJS()
   }),
   (dispatch) => ({

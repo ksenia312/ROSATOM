@@ -17,6 +17,5 @@ export const changeVisibilityModal = (dispatch, modal_type, successChecker) => {
   return dispatch({type: types.CHANGE_VISIBILITY_MODAL, modal_type:modal_type})
 }
 export const setDropdownValue = (dispatch, data, successChecker) => {
-  console.log(data)
   return dispatch({type: types.SET_DROPDOWN_VALUE, data:data})
 }

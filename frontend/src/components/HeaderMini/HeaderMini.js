@@ -11,7 +11,6 @@ export default connect(
 
 
   render() {
-    console.log(this.props.pathname)
     const {pathname} = this.props
     return (
         <div className={style.header}>

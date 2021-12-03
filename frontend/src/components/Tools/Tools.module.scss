@@ -1,0 +1,45 @@
+@import "~@styles/common.scss";
+
+.tools__container{
+  background-color: #a2a2a2;
+  margin: 0;
+  padding: 0;
+  .tools__content{
+    @include paddings;
+    .tools__dropdown {
+      @include sizes($h: 100px, $w: 100%);
+      font-size: 36px;
+      outline: none;
+      background-color: rgba(60, 59, 59, 0.5);
+      padding: 0 10px;
+      color: #FFFFFF;
+      option {
+        font-size: 24px;
+      }
+    }
+    .tools__dropdown:hover{
+      box-shadow: $shadow;
+    }
+    .tools__buttons {
+      display: flex;
+      justify-content: space-around;
+      .tools__leftCol{
+        display: flex;
+
+      }
+      .tools__rightCol{
+
+      }
+
+
+
+
+
+
+    }
+
+
+  }
+
+
+}

@@ -1,6 +1,7 @@
 @import "~@styles/common.scss";
 
 .recent_accidents__container {
+  @include paddings(map-get($header, global-h));
   .recent_accidents_h2{
     padding: 15px 0;
   }

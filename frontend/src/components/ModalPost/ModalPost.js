@@ -15,7 +15,6 @@ export default connect(
             <div className={style.modalPost__container}>
                 <div className={style.modalPost__header}>
                     <h3>Вы уверены, что хотите сформировать отчёт?</h3>
-                    <h3>×</h3>
                 </div>
                 <div className={style.modalPost__buttons}>
                     <Button small><i className="fas fa-file-pdf"/> Сформировать отчёт</Button>

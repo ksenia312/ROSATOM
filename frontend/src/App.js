@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
-import {Authorization, Cabinet, Landing, Charity, Accident, PDF} from "@pages";
+import {Authorization, Cabinet, Landing, Charity, Accident, PDF, ModalRequest} from "@pages";
 
 
 export default connect(
@@ -22,6 +22,7 @@ export default connect(
     ['^/accident', () => <Accident/>] ,
     ['^/pdf', () => <PDF/>],
     ['^/charity', () => <Charity/>] ,
+    ['^/request', () => <ModalRequest/>] ,
     // Path for / (main page with tasks)
   ]
 

@@ -1,0 +1,41 @@
+@import "~@styles/common.scss";
+
+.goal__container {
+    @include sizes($h: 100px, $w: 100px);
+    border-radius: 100px;
+    margin: 10px;
+    border: 6px solid #F6F6F6;
+    box-sizing: border-box;
+    box-shadow: $shadow;
+    transition: all 0.8s ease-in;
+    i {
+      padding-top: 20px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 3em;
+      transform: rotate(-45deg);
+    }
+  p {
+    color: transparent;
+    font-weight: bold;
+  }
+}
+.goal__container:hover {
+   border: none;
+   background-color: #3C3B3B;
+   width: 700px;
+
+  i {
+    color: transparent;
+    transition-duration: 1ms;
+  }
+
+  p {
+    color: white;
+    transition-delay: 0.5s;
+    transition-timing-function: ease-out;
+  }
+ }

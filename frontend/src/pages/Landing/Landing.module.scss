@@ -3,8 +3,41 @@
 .landing__container {
   .content__container {
     padding: map-get($header, global-h) 0 0 20px;
-    display: grid;
-    grid-template-rows: repeat(5, 100px);
+    .content__button {
+      padding-top: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .content__text {
+      min-height: 280px;
+      margin: 0 auto;
+      padding: 50px 0 0 0;
+      text-align: center;
+      line-height: 40px;
+      @include sizes($w: 1130px/1376px * 100%, $h: max-content);
+      background-image: url("~@files/legs.png");
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: -10px ;
+    }
   }
-
+  .content__charity_container {
+    padding: 20px 0 0 0;
+    .content__button {
+      padding-top: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .content__charity_text {
+      min-height: 280px;
+      margin: 0 auto;
+      padding: 50px 0 0 0;
+      text-align: center;
+      line-height: 40px;
+      @include sizes($w: 1130px/1376px * 100%, $h: max-content);
+      background-image: url("~@files/fish.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }

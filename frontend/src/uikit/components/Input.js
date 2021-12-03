@@ -21,7 +21,7 @@ const Input = styled.input
       else {return 18}
     }}px;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 0;
     background: white;
     border: 1px solid gray;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);

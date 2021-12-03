@@ -32,11 +32,14 @@
         color: #FFFFFF;
         .form__input {
           @include sizes($h: 50px, $w: 450px);
-          background: rgba(255, 255, 255, 0.05);
+          background-color: rgba(255, 255, 255, 0.05);
           display: inline-block;
           margin-bottom: 15px;
           border: none;
           box-shadow: $shadow;
+          padding-left: 15px;
+          outline: none;
+
         }
       }
       .form__button {
@@ -47,7 +50,7 @@
         background-color: #FFFFFF;
       }
       .form__button:hover {
-        background-color: #6D5F69;
+        background-color: #bbbbbb;
         color: #FFFFFF;
       }
     }

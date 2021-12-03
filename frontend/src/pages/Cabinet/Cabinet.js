@@ -16,7 +16,6 @@ export default connect(
         <div className={style.content__container}>
           <RecentAccidents/>
           <Tools />
-          <ModalReport />
           <ModalPost />
         </div>
         <Footer/>

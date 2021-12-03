@@ -13,7 +13,13 @@ export default connect(
     render() {
         return (
             <div className={style.modalPost__container}>
-                post
+                <div className={style.modalPost__header}>
+                    <h3>Вы уверены, что хотите опубликовать новость?</h3>
+                </div>
+                <div className={style.modalPost__buttons}>
+                    <Button small><i className="fas fa-newspaper"/> Опубликовать новость</Button>
+                    <Button small>Отмена</Button>
+                </div>
             </div>
         )
     }

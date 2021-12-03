@@ -25,7 +25,7 @@ export default connect(
                         </div>
                         <div className={style.tools_Column}>
                             <Button><i className="fas fa-plane"/> Отправить БПЛА</Button>
-                            <Button><i className="fas fa-newspaper"/> Выложить новость</Button>
+                            <Button><i className="fas fa-newspaper"/> Опубликовать новость</Button>
                         </div>
                     </div>
                 </div>

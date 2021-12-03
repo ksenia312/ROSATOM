@@ -1,7 +1,8 @@
 import React from "react"
 import style from './Accident.module.scss'
 import {connect} from "react-redux";
-import {HeaderMini} from "@components";
+import {HeaderMini, Marker} from "@components";
+import GoogleMapReact from "google-map-react";
 
 
 export default connect(
@@ -12,7 +13,10 @@ export default connect(
   (dispatch) => ({})
 )
 (class Accident extends React.Component {
-
+  static defaultProps = {
+    zoom: 4,
+    key: 'AIzaSyBCIZwuZjEa9gW_CDjwJx6ySCJjQHhuqAM'
+  };
   render() {
     const {accidentID, key} = this.props
     let accident = {}
@@ -24,7 +28,18 @@ export default connect(
       <div className={style.accident__container}>
         <HeaderMini />
           <div className={style.accident__content}>
-            <img className={style.accident__picture} src={accident.img} alt={'img'}/>
+            <div className={style.accident__picture}>
+
+              <GoogleMapReact
+                bootstrapURLKeys={{key: this.props.key}}
+                defaultCenter={{lat: accident.mark?.lat, lng:accident.mark?.lng}}
+                defaultZoom={this.props.zoom}
+                yesIWantToUseGoogleMapApiInternals={true}
+              >
+                <Marker lat={accident.mark.lat} lng={accident.mark.lng}/>
+              </GoogleMapReact>
+
+            </div>
             <div className={style.accident__description}>
               <h2>{accident.name}</h2>
               <div className={style.accident__descrElement}>

@@ -18,7 +18,7 @@ export default connect(
     for (let i = 0; i < 20; i++)
       data[i] = {statistics: this.getRandomInt(10, 30), time: `${10+i}.11`}
     return (
-      <div className={style.statistic__container}>
+      <div id={'statistics'} className={style.statistic__container}>
         <div>
           <h2>Статистика</h2>
           <h3>Количество аварий в Вашем регионе за последний месяц</h3>

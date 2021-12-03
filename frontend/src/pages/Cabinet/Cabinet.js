@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import {Footer, Header, RecentAccidents, Tools, ModalReport} from "@components";
+import {Footer, Header, RecentAccidents, Tools, ModalReport, ModalPost} from "@components";
 import style from './Cabinet.module.scss'
 import Button from "@ui/Button";
 
@@ -17,6 +17,7 @@ export default connect(
           <RecentAccidents/>
           <Tools />
           <ModalReport />
+          <ModalPost />
         </div>
         <Footer/>
       </div>

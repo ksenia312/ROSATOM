@@ -6,16 +6,16 @@ const Button = styled.button
     position: relative;
     border: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     // min-width: max-content;
     height: ${props => {
-      if (props.small) {return 50}
+      if (props.small) {return 70}
       else if (props.large) {return 130}
       else {return 100}
     }}px;
     width: ${props => {
-      if (props.small) {return 130}
+      if (props.small) {return 240}
       else if (props.large) {return 430}
       else {return 330}
     }}px;

@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import {Footer, Header, RecentAccidents, Tools} from "@components";
+import {Footer, Header, RecentAccidents, Tools, ModalPost} from "@components";
 import style from './Cabinet.module.scss'
 import Button from "@ui/Button";
 
@@ -16,10 +16,8 @@ export default connect(
         <div className={style.content__container}>
           <RecentAccidents/>
           <Tools />
+          <ModalPost />
         </div>
-
-
-        <Button small><i className="fab fa-telegram-plane" /> Отправить уведомление</Button>
         <Footer/>
       </div>
     )

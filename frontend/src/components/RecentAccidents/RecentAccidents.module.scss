@@ -2,6 +2,7 @@
 
 .recent_accidents__container {
   @include paddings(map-get($header, global-h));
+  padding-bottom: 15px;
   .recent_accidents_h2{
     padding: 15px 0;
   }

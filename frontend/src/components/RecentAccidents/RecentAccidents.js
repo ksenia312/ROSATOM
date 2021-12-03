@@ -33,7 +33,7 @@ export default connect(
               </GoogleMapReact>
 
             </div>
-            <AccidentsGalleryMini/>
+            <AccidentsGalleryMini left/>
           </div>
         </div>
       )

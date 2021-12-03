@@ -13,23 +13,25 @@ export default connect(
   render() {
     const {pathname} = this.props
     return (
-        <div className={style.header}>
-          <div> </div>
-          <nav  className={style.header__nav}>
-            {pathname === '/cabinet' ? <a href={'/'}>Главная</a> : <div/>}
-            {pathname === '/charity' ? <a href={'/'}>Главная</a> : <div/>}
-            {pathname === '/cabinet' ? <a href={'#last'}>Последние аварии</a> : <div/>}
-            {pathname === '/cabinet' ? <a href={'#tools'}>Инструменты</a> : <div/>}
+      <div className={style.header}>
+        <div></div>
+        <nav className={style.header__nav}>
+
+          {pathname === '/charity' ? <a href={'/'}>Главная</a> : <div/>}
+
+          {pathname === '/cabinet' ? <a href={'/'}>Главная</a> : <div/>}
+          {pathname === '/cabinet' ? <a href={'#last'}>Последние аварии</a> : <div/>}
+          {pathname === '/cabinet' ? <a href={'#tools'}>Инструменты</a> : <div/>}
+          {pathname === '/cabinet' ? <a href={'#registry'}>Реестр аварий</a> : <div/>}
 
 
+          {pathname === '/' ? <a href={'#warn'}>Сообщить об аварии</a> : <div/>}
+          {pathname === '/' ? <a href={'#goals'}>Цели</a> : <div/>}
+          {pathname === '/' ? <a href={'#help'}>Помочь</a> : <div/>}
 
-            {pathname === '/' ? <a href={'#warn'}>Сообщить об аварии</a> : <div/>}
-            {pathname === '/' ? <a href={'#goals'}>Цели</a> : <div/>}
-            {pathname === '/' ? <a href={'#help'}>Помочь</a> : <div/>}
-
-            <a href={'#footer'}>Контакты</a>
-          </nav>
-        </div>
+          <a href={'#footer'}>Контакты</a>
+        </nav>
+      </div>
     )
   }
 })

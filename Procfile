@@ -1,0 +1,1 @@
+web: cd ./frontend/build && serve -s

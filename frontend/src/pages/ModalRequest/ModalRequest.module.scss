@@ -13,5 +13,61 @@
     justify-content: center;
     align-items: center;
 
-
+    .modalRequest__modal {
+        @include sizes($h: 450px, $w: 450px);
+        background: rgba(246, 246, 246, 0.9);
+        box-shadow: $shadow;
+        padding: 40px;
+        .modalRequest__head {
+            display: flex;
+            align-items: center;
+            color: #3C3B3B;
+            margin-bottom: 15px;
+        }
+        .modalRequest__map {
+            @include sizes($h: 220px, $w: 100%);
+            background-color: #ff3535;
+            margin-bottom: 20px;
+        }
+        .modalRequest__tools{
+            width: 100%;
+            .modalRequest__input {
+                .form__input{
+                    @include sizes($h: 50px, $w: 60%);
+                    font-size: 0.8em;
+                    background-color: rgba(255, 255, 255, 0.05);
+                    display: inline-block;
+                    margin-bottom: 15px;
+                    border: none;
+                    box-shadow: $shadow;
+                    padding: 0 15px;
+                    outline: none;
+                }
+            }
+            .modalRequest__photo {
+                .modalRequest__inputPhoto{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .modalRequest__buttonBlock {
+            display: flex;
+            justify-content: right;
+            .modalRequest__button {
+                @include sizes($h: 50px, $w: 120px);
+                display: inline-block;
+                border: none;
+                box-shadow: $shadow;
+                background-color: #FFFFFF;
+            }
+            .modalRequest__button:hover {
+                background-color: #bbbbbb;
+                color: #FFFFFF;
+            }
+            .modalRequest__button:active {
+                background-color: #2b2b2b;
+                color: #FFFFFF;
+            }
+        }
+    }
 }

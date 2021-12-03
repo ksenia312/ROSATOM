@@ -4,6 +4,7 @@ import {push} from "connected-react-router";
 import style from './Authorization.module.scss';
 import Input from "@ui/Input";
 import {doFetchForm} from "@reducers/usersActions";
+import HeaderMini from "@components/HeaderMini/HeaderMini";
 
 export default connect(
   (state) => ({
@@ -53,6 +54,7 @@ export default connect(
 
     return (
       <div className={style.auth__container}>
+        <HeaderMini />
         <div className={style.auth__modal}>
           <div className={style.auth__head}>
             <h2>Вход</h2>

@@ -6,8 +6,8 @@ import Marker from "@components/Marker/Marker"
 import AccidentsGalleryMini from "@components/AccidentsGalleryMini/AccidentsGalleryMini";
 import HeaderMini from "@components/HeaderMini/HeaderMini";
 import Tools from "@components/Tools/Tools";
-import ModalPost from "@components/ModalPost/ModalPost";
+import ModalReport from "@components/ModalReport/ModalReport";
 
 export {
-  Header, RecentAccidents, Footer, Marker, AccidentMini, AccidentsGalleryMini, HeaderMini, Tools, ModalPost
+  Header, RecentAccidents, Footer, Marker, AccidentMini, AccidentsGalleryMini, HeaderMini, Tools, ModalReport
 }

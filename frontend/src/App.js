@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
-import {Authorization, Cabinet, Landing} from "@pages";
+import {Authorization, Cabinet, Landing, Charity} from "@pages";
 import Accident from "@pages/Accident/Accident";
 import {PDF} from "@components";
 
@@ -24,6 +24,7 @@ export default connect(
     ['^/authorization', () => <Authorization/>],
     ['^/accident', () => <Accident/>] ,
     ['^/pdf', () => <PDF/>]
+    ['^/charity', () => <Charity/>] ,
     // Path for / (main page with tasks)
   ]
 

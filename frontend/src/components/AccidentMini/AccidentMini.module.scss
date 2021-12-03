@@ -19,6 +19,7 @@
       background-color: #ffffff;
       @include sizes($h: 120px, $w: 100%);
       box-shadow: $shadow;
+      object-fit: cover;
     }
 
     .accident_mini__description {

@@ -20,20 +20,21 @@ export default connect(
     render() {
       return (
         <div className={style.recent_accidents__container}>
-          <div style={{width: '100%'}} className={style.recent_accidents__map}>
-            <GoogleMapReact
-              bootstrapURLKeys={{key: this.props.key}}
-              defaultCenter={this.props.center}
-              defaultZoom={this.props.zoom}
+          <h2 className={style.recent_accidents_h2}>Потенциальные аварии, обнаруженные за последний час</h2>
+          <div className={style.recent_accidents}>
+            <div style={{width: '100%'}} className={style.recent_accidents__map}>
+              <GoogleMapReact
+                bootstrapURLKeys={{key: this.props.key}}
+                defaultCenter={this.props.center}
+                defaultZoom={this.props.zoom}
+                yesIWantToUseGoogleMapApiInternals={true}
+              >
+                {Object.values(this.props.marks).map((mark) => <Marker key={mark.id} lat={mark.lat} lng={mark.lng}/>)}
+              </GoogleMapReact>
 
-              yesIWantToUseGoogleMapApiInternals={true}
-            >
-              {Object.values(this.props.marks).map((mark) => <Marker key={mark.id} lat={mark.lat} lng={mark.lng}/>)}
-            </GoogleMapReact>
-
+            </div>
+            <AccidentsGalleryMini/>
           </div>
-
-          <AccidentsGalleryMini/>
         </div>
       )
     }

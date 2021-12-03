@@ -37,11 +37,19 @@ export const accidentsInitialState = fromJS({
       region: 'Новгородская область',
     },
   },
-  modals:
-    {
+  modals: {
       modal_reportPDF: false,
       modal_reportEXCEL: false,
       modal_plane: false
+    },
+  dropdown: {
+      id: 1,
+      img: 'https://mcdn.tvzvezda.ru/news/vstrane_i_mire/content/201710171029-jk5e.htm/1.jpg',
+      name: 'Авария Москва',
+      date: '03.12.2021',
+      time: '3.08',
+      status: 'Подтверждена, устраняется',
+      region: 'Новгородская область',
     }
 })
 
@@ -60,6 +68,11 @@ export const accidentsReducer = (state = {}, action) => {
       if (action.modal_type.modal_plane) {
         return state.mergeDeepIn(['modals'], {modal_plane: !state.toJS().modals.modal_plane})
       }
+      return state
+    case types.SET_DROPDOWN_VALUE:
+      console.log(action)
+      return state
+        .mergeDeepIn(['dropdown'], fromJS(action.data))
     default:
       return state
   }

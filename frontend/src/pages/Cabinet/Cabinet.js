@@ -2,6 +2,7 @@ import React from "react";
 import {connect} from "react-redux";
 import {Footer, Header, RecentAccidents} from "@components";
 import style from './Cabinet.module.scss'
+import Button from "@ui/Button";
 
 export default connect(
   (state) => ({}),
@@ -15,6 +16,7 @@ export default connect(
         <div className={style.content__container}>
           <RecentAccidents/>
         </div>
+        <Button small><i className="fab fa-telegram-plane" /> Отправить уведомление</Button>
         <Footer/>
       </div>
     )

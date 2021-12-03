@@ -29,7 +29,10 @@ const Button = styled.button
       else if (props.large) {return 36}
       else {return 24}
     }}px;;
-    color: #ffffff;
+    color: ${props => {
+      if (props.light) {return `#3C3B3B`}
+      else {return `#ffffff`}
+    }};      
     letter-spacing: 2px;
     margin: 2px;
     padding: 0 30px;
@@ -37,6 +40,7 @@ const Button = styled.button
       if (props.red) {return `#9b1b1e`}
       else if (props.blue) {return `#1f3781`}
       else if (props.green) {return `#21981e`}
+      else if (props.light) {return `#`}
       else {return `#3C3B3B`}
     }};
     :hover {
@@ -44,8 +48,10 @@ const Button = styled.button
         if (props.red) {return `#731518`}
         else if (props.blue) {return `#152456`}
         else if (props.green) {return `#125611`}
+        else if (props.light) {return `#3C3B3B`}
         else {return `#262525`}
       }};
+      color: #F6F6F6;
     }
     :active {
       background-color: ${props => {
@@ -54,6 +60,7 @@ const Button = styled.button
         else if (props.green) {return `#0a2f09`}
         else {return `#000000`}
       }};
+      color: #ffffff;
     }
   `
 

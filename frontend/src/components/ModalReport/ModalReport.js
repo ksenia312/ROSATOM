@@ -17,7 +17,7 @@ export default connect(
                     <h3>Вы уверены, что хотите сформировать отчёт?</h3>
                 </div>
                 <div className={style.modalReport__buttons}>
-                    <Button small><i className="fas fa-file-pdf"/> Сформировать отчёт</Button>
+                    <Button small>Сформировать отчёт</Button>
                     <Button small>Отмена</Button>
                 </div>
             </div>

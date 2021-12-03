@@ -1,0 +1,36 @@
+@import "~@styles/common.scss";
+
+.modalPlane__container {
+  @include sizes($h: max-content, $w: max-content);
+  background: #2b2b2b;
+  box-shadow: $shadow;
+  padding: 40px;
+  color: #F6F6F6;
+  .modalPlane__header {
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  .modalPlane__map{
+    @include sizes($h: 300px, $w: 100%);
+    background-color: #F6F6F6;
+    color: #3C3B3B;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 15px;
+  }
+  .modalPlane__buttons {
+    display: flex;
+    justify-content: space-around;
+    i {
+      font-size: 2em;
+    }
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+}

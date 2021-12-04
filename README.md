@@ -41,7 +41,8 @@
 ### PostgreSQL.
 
 ### Frontend
-> Разработан на *ReactJS*, со сборкой Webpack
+>Разработан на *ReactJS*
+>Сборка Webpack
 
 ### Backend
 >Построен при помощи *FastAPI*, предполагаемый метод связи
@@ -62,14 +63,13 @@ use_model.py - использование сети\
 >При обучении на ~8000 элементов (с грубо сделанной разметкой) 
 нейросеть показала точность около 60%
 
-# Установка
-Установка зависимостей проекта
-Для установки зависимостей Frontend в корневой папке frontend надо выполнить команду `npm install`.
-Для запуска frontend надо в папке frontend выполнить команду `npm run dev-server`
+# Установка зависимостей проекта
+>Для установки зависимостей Frontend в корневой папке frontend надо выполнить команду `npm install`.
+>Для запуска frontend надо в папке frontend выполнить команду `npm run dev-server`
 
 # Разработчики
 
-Асонов Николай backend
-Никитина Ксения frontend
-Мельникова Мария frontend
-Глебов Иван fullstack (frontend/backend - 80/20) https://t.me/Iota_02 | https://github.com/IvanGlebov
+>Асонов Николай backend
+>Никитина Ксения frontend
+>Мельникова Мария frontend
+>Глебов Иван fullstack (frontend/backend - 80/20) https://t.me/Iota_02 | https://github.com/IvanGlebov

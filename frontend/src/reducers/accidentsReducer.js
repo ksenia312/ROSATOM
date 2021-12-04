@@ -38,11 +38,11 @@ export const accidentsInitialState = fromJS({
   },
   dropdown: {
     id: 1,
-    img: 'https://mcdn.tvzvezda.ru/news/vstrane_i_mire/content/201710171029-jk5e.htm/1.jpg',
-    name: 'Авария Москва',
-    date: '03.12.2021',
-    time: '3.08',
-    status: 'Подтверждена, устраняется',
+    name: 'Авария',
+    date: '',
+    time: '',
+    status: '',
+    mark:{lat:'', lng:''}
   }
 })
 

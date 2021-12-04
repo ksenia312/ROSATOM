@@ -69,7 +69,7 @@ use_model.py - использование сети\
 
 # Разработчики
 
-###Асонов Николай backend
-###Никитина Ксения frontend
-###Мельникова Мария frontend
-###Глебов Иван fullstack (frontend/backend - 80/20) https://t.me/Iota_02 | https://github.com/IvanGlebov
+Асонов Николай backend
+Никитина Ксения frontend
+Мельникова Мария frontend
+Глебов Иван fullstack (frontend/backend - 80/20) https://t.me/Iota_02 | https://github.com/IvanGlebov

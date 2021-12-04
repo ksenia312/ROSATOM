@@ -2,13 +2,13 @@ import keras.engine.training
 from keras.preprocessing.image import load_img, ImageDataGenerator
 import os
 from keras.applications import vgg16 as vgg
-# Модуль, с помощью которого мы будем "сшивать" последовательные модели
+
 from keras.engine.training import Model
-# Импортируем Pooling по всему слою входных данных и нормализацию батчей
+
 from keras.layers import GlobalAveragePooling2D, BatchNormalization
-# Импортируем полносвязный слой, слои активации и слой, превращающий картинку в вектор
+
 from keras.layers import Dense, Activation, Flatten
-# Импортируем сверточный слой, max-пулинг слой и слой, выключающий часть нейронов
+
 from keras.layers import Conv2D, MaxPooling2D, Dropout
 import matplotlib as plt
 import numpy as np
@@ -24,30 +24,7 @@ train_datagen = ImageDataGenerator(rescale=1./255)
 test_datagen = ImageDataGenerator(rescale=1./255)
 
 
-def load_special_images():
-    """
-      Эта функция загружает 3 картинки для темы бинарной классификации кошек
-      и собак
-      Returns
-      ----------
-      im1, im2, im3 : array
-          Three images in a form of numpy array
-    """
-    import requests
-    from PIL import Image
 
-    image_url_1 = 'https://preview.redd.it/4j8gx4ztzex01.png?width=960&crop=smart&auto=webp&s=5e80ab0071d56cc042f7b709648de8cde394832a'
-    image_url_2 = 'https://cdn.images.express.co.uk/img/dynamic/128/590x/secondary/Viral-cat-sensation-715546.jpg'
-    image_url_3 = 'https://www.sunnyskyz.com/uploads/2016/12/hmm9j-dog-or-cat-2.jpg'
-
-    im1 = Image.open(requests.get(image_url_1, stream=True).raw)
-    im1 = np.array(im1)
-    im2 = Image.open(requests.get(image_url_2, stream=True).raw)
-    im2 = np.array(im2)
-    im3 = Image.open(requests.get(image_url_3, stream=True).raw)
-    im3 = np.array(im3)
-
-    return im1, im2, im3
 
 
 def image_to_batch(img, size=150):
@@ -55,15 +32,6 @@ def image_to_batch(img, size=150):
       Эта функция переводит картинку размером (img_width,img_height, 3) в батч
       размером (1,size,size,3)
       Parameters
-      ----------
-      img : array
-          Image of size (img_width,img_height, 3)
-      size : int
-          Size of image in batch
-      Returns
-      ----------
-      img_resized : array
-          Batch of one image with shape (1,size,size,3)
     """
     import cv2
     img_resized = cv2.resize(img, (size, size)).reshape(1, size, size, img.shape[2])
@@ -120,7 +88,7 @@ for layer in vgg_model.layers:
      layer.trainable = False
 
 
-# Скомпилируем модель с функцией ошибки binary crossentropy, оптимизатором Адам
+# Скомпилируем модель с функцией ошибки binary crossentropy, оптимизатор Адам
 # (оптимизатор, который со стандартным набором параметров может обучить эффективную
 # нейросеть), и метрикой - количеством правильно угаданных картинок.
 fin_model.compile(loss='binary_crossentropy',
@@ -150,22 +118,6 @@ history_cnn = fin_model.fit_generator(train_generator,
               shuffle=True)
 
 
-keras.models.save_model(
-    fin_model,
-    mode_file,
-    overwrite=True,
-    include_optimizer=True,
-    save_format=None,
-    signatures=None,
-    options=None,
-    save_traces=True,
-)
-
-
-pred1 = fin_model.predict(im1_224)
-pred2 = fin_model.predict(im2_224)
-pred3 = fin_model.predict(im3_224)
-print(pred1, pred2, pred3)
 
 
 keras.models.save_model(

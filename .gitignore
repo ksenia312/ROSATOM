@@ -1,0 +1,5 @@
+backend/venv
+logick/venv
+ML_satellite/venv
+ML_satellite/dataset/test/**
+ML_satellite/dataset/train/**

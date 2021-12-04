@@ -41,8 +41,8 @@
 ### PostgreSQL.
 
 ### Frontend
->Разработан на *ReactJS*
->Сборка Webpack
+>   - Разработан на *ReactJS*
+>   - Сборка Webpack
 
 ### Backend
 >Построен при помощи *FastAPI*, предполагаемый метод связи

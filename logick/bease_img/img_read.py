@@ -7,34 +7,6 @@ from eolearn.mask import AddValidDataMaskTask
 from eolearn.features import SimpleFilterTask
 
 import pickle
-"""
-patch[FeatureType.MASK]["CLD"] = np.load(gzip.open(os.path.join("РН-ННП-2020-149", "mask", "CLD" + ".npy.gz"), "r"))
-
-"""
-
-"""
-TODO
-разобраться с облачностью
-найти картинку с наименьшей облачностью
-понеслись machine-learning
-
-
-def form_patch(dir_path):
-    test_dir = dir_path
-    for dir in os.listdir(test_dir):
-        patch = form_start_patch(os.path.join(test_dir, dir))
-        add_valid_mask = AddValidDataMaskTask(predicate=calculate_valid_data_mask)
-        patch = add_valid_mask.execute(patch)
-        add_coverage = AddValidDataCoverageTask(patch)
-        patch = add_coverage.execute(patch)
-        cloud_coverage_threshold = 0.50
-        remove_cloudy_scenes = SimpleFilterTask((FeatureType.MASK, 'VALID_DATA'),
-                                                ValidDataCoveragePredicate(cloud_coverage_threshold))
-        patch = remove_cloudy_scenes.execute(patch)
-        print(patch)
-        return patch
-
-"""
 
 def form_patch(dir_path):
     patch = form_start_patch(dir_path)

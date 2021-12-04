@@ -34,14 +34,12 @@ def oil_imgs_flow(dir_name="oil_dataset"):
         try:
             patch = form_patch(dir_path=os.path.join(dir_path, dir))
         except:
-            print("error")
             continue
         save_rgb(patch, dir)
 
 
 def save_rgb(patch, name):
     for i, data in enumerate(patch.data["L2A_data"]):
-        print(data.shape)
 
         img = Image.fromarray(np.clip(data[:, :]*255, 0, 255).astype('uint8'), 'RGB')
         img.save(os.path.join('oil', name+ str(i) + ".png"))

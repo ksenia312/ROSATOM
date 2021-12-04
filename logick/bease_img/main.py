@@ -8,19 +8,6 @@ from eolearn.features import SimpleFilterTask
 from img_read import *
 import pickle
 from PIL import Image
-"""
-patch[FeatureType.MASK]["CLD"] = np.load(gzip.open(os.path.join("РН-ННП-2020-149", "mask", "CLD" + ".npy.gz"), "r"))
-
-"""
-
-"""
-TODO
-разобраться с облачностью
-найти картинку с наименьшей облачностью
-понеслись machine-learning
-"""
-
-""" Кастомный вывод изображений"""
 
 
 def show_images(images) -> None:
@@ -45,15 +32,12 @@ def default_imgs_flow():
         try:
             patch = form_patch(dir_path=os.path.join(dir_path, dir, "sentinel2-l2a", "patches", "64x64-10", "2021",))
         except:
-            print("error")
             continue
-        #show_combo(patch, 3, 2, 1)
         save_rgb(patch, dir)
 
 
 def save_rgb(patch, name):
     for i, data in enumerate(patch.data["L2A_data"]):
-        print(data.shape)
 
         img = Image.fromarray(np.clip(data[:, :]*255, 0, 255).astype('uint8'), 'RGB')
         img.save(os.path.join('clear', name+ str(i) + ".png"))
@@ -61,5 +45,4 @@ def save_rgb(patch, name):
 
 if __name__=="__main__":
     default_imgs_flow()
-    print("Nice")
 

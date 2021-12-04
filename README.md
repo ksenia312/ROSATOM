@@ -68,8 +68,8 @@ use_model.py - использование сети\
 >Для запуска frontend надо в папке frontend выполнить команду `npm run dev-server`
 
 # Разработчики
-
-Асонов Николай backend
-Никитина Ксения frontend
-Мельникова Мария frontend
-Глебов Иван fullstack (frontend/backend - 80/20) https://t.me/Iota_02 | https://github.com/IvanGlebov
+1. Асонов Николай backend
+2. Никитина Ксения frontend
+3. Мельникова Мария frontend
+4. Глебов Иван fullstack (frontend/backend - 80/20) https://t.me/Iota_02 | https://github.com/IvanGlebov
+5. Кубашин Илья backend

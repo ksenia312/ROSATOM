@@ -53,7 +53,7 @@ export default connect(
           <div className={style.modalRequest__tools}>
             <div className={style.modalRequest__input}>
               <input className={style.form__input} type={'number'} onInput={'slice(0,10)'} maxLength="10"
-                     placeholder={"введите номер телефона"}/>
+                     placeholder={"Введите номер телефона"}/>
             </div>
             <div className={style.modalRequest__photo}>
               <h3>Вы можете прикрепить фото! </h3>
